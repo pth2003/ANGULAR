@@ -1,0 +1,25 @@
+<div class="content w-full h-80 my-24">
+  <!-- The AG Grid component, with Dimensions, CSS Theme, Row Data, and Column Definition -->
+  <ag-grid-angular
+    style="width: 100%"
+    class="ag-theme-alpine"
+    [theme]="theme"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [components]="frameworkComponents"
+    [pagination]="true"
+    [paginationPageSize]="paginationPageSize"
+    [paginationPageSizeSelector]="[5, 7, 10, 20]"
+    [domLayout]="'autoHeight'"
+    (gridReady)="onGridReady($event)"
+    (gridSizeChanged)="onGridSizeChanged($event)"
+    [suppressHorizontalScroll]="true"
+    suppressPaginationPanel="true"
+  >
+  </ag-grid-angular>
+  <app-pagination
+    (pageSizeChange)="updatePageSize($event)"
+    [gridApi]="gridApi"
+  ></app-pagination>
+</div>

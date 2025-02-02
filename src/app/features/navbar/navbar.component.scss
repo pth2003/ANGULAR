@@ -1,0 +1,25 @@
+:host ::ng-deep {
+  nav {
+    button {
+      color: #fff;
+      text-transform: none;
+      font-size: 14px;
+      justify-content: center;
+    }
+  }
+  [tuiTabs][data-vertical] [tuiTab] {
+    text-align: center;
+    padding: 8px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  [tuiTab]._active,
+  [tuiTabs][data-vertical] [tuiTab]:hover {
+    color: #fff;
+    background-color: #005f5d;
+  }
+  [tuiIcons] {
+    font-size: 14px;
+  }
+}

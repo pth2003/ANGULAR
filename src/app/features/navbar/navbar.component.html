@@ -1,0 +1,15 @@
+<section class="w-[100px] h-full flex flex-col items-center bg-primary">
+  <div class="logo py-3">
+    <tui-avatar [src]="'/assets/logo.png'" />
+  </div>
+  <nav tuiTabs vertical="left">
+    <button
+      *ngFor="let item of data"
+      tuiTab
+      type="button"
+      iconStart="@tui.credit-card"
+    >
+      {{ item }}
+    </button>
+  </nav>
+</section>

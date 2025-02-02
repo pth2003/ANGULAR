@@ -1,0 +1,24 @@
+<tui-drawer
+  direction="left"
+  class="drawer fixed left-[100px] w-[250px] h-full bg-white shadow-lg transition-all duration-300"
+  *tuiPopup="open"
+  mode="side"
+>
+  <tui-accordion>
+    <ng-container *ngFor="let item of data">
+      <!-- Parent Accordion -->
+      <button tuiAccordion>
+        {{ item.title }}
+      </button>
+      <tui-expand>
+        <div *ngIf="(item.children || []).length > 0">
+          <ng-container *ngFor="let child of item.children || []">
+            <div style="padding-left: 16px" class="nested-acc py-2">
+              <a class="cursor-pointer" tuiAccordion>{{ child.title }}</a>
+            </div>
+          </ng-container>
+        </div>
+      </tui-expand>
+    </ng-container>
+  </tui-accordion>
+</tui-drawer>

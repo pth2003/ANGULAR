@@ -1,0 +1,29 @@
+.drawer {
+  top: 10%;
+  border-radius: 0;
+  inline-size: 20rem;
+  position: fixed;
+  left: 100px !important;
+  height: 100%;
+}
+.nested-acc {
+  position: relative; // Ensure the pseudo-element is positioned correctly
+
+  &:hover {
+    background-color: #b1e6e4;
+    border-radius: 3px;
+  }
+
+  // Styling for the ::before pseudo-element
+  &:hover::before {
+    content: "";
+    position: absolute; // Position it absolutely within the parent
+    left: 0;
+    top: 50%;
+    width: 5px;
+    height: 80%; // Set a height or width depending on the desired effect
+    background-color: #167775;
+    // Center the line
+    transform: translate(0, -50%);
+  }
+}

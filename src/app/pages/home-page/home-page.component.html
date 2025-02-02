@@ -1,0 +1,18 @@
+<div class="flex">
+  <app-navbar class="fixed left-0 top-0 h-full w-[100px]"></app-navbar>
+  <div class="container ml-[100px] flex-1">
+    <app-header (toggleSidebar)="toggleSidebar()"></app-header>
+    <div class="flex relative">
+      <!-- Sidebar ở bên trái -->
+      <app-sidebar [open]="sidebarOpen()"></app-sidebar>
+
+      <!-- Tableview -->
+      <div
+        [class.ml-[350px]]="sidebarOpen()"
+        class="transition-all duration-300 flex-1"
+      >
+        <app-tableview></app-tableview>
+      </div>
+    </div>
+  </div>
+</div>

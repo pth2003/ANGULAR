@@ -1,0 +1,20 @@
+<div class="flex gap-1 items-center">
+  <button
+    tuiButton
+    size="s"
+    shape="square"
+    (click)="onEdit()"
+    tuiTooltip="Chỉnh sửa"
+  >
+    <tui-icon icon="@tui.square-pen" class="text-primary mb-2"></tui-icon>
+  </button>
+  <button
+    tuiButton
+    size="s"
+    shape="square"
+    (click)="onDelete()"
+    tuiTooltip="Xóa"
+  >
+    <tui-icon icon="@tui.trash-2" class="text-primary mb-2"></tui-icon>
+  </button>
+</div>

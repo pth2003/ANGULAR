@@ -1,0 +1,20 @@
+<div class="container px-4 flex items-center justify-between border-b-2">
+  <div class="menu flex items-center gap-2">
+    <button (click)="onToggleSidebar()"><tui-icon icon="@tui.menu" /></button>
+    <h3 tuiTitle="l" class="text-2xl text-primary">Quản lý nghiệp vụ thẻ</h3>
+  </div>
+  <!-- <div class="user-manage">
+    <tui-avatar [src]="'@tui.mastercard'" />
+    <div></div>
+  </div> -->
+  <button
+    class="user-manage px-4 py-2 flex mr-4 items-center gap-5"
+    type="button"
+  >
+    <tui-avatar [src]="'@tui.mastercard'" />
+    <div tuiTitle class="text-left">
+      UAT_Lưu Hải Yến
+      <div tuiSubtitle>P.Giao dịch khách hàng</div>
+    </div>
+  </button>
+</div>

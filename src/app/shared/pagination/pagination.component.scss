@@ -1,0 +1,23 @@
+:host ::ng-deep {
+  tui-pagination {
+    .t-button {
+      background-color: transparent;
+      //   border-radius: 4px;
+      margin: 0 4px;
+      color: #167775;
+      font-weight: bold;
+    }
+    [tuiAppearance][data-appearance="primary"] {
+      background-color: #b1e6e4;
+      border-radius: 50%;
+    }
+    .t-item_active {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .t-item:hover {
+      background-color: #ddd;
+    }
+  }
+}

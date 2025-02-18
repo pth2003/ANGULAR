@@ -1,0 +1,19 @@
+::ng-deep {
+    .ngx-file-drop__drop-zone {
+        width: 80%;
+        height: 200px !important; 
+        margin: 0 !important;
+    }
+    .ngx-file-drop__content {
+        flex-direction: column;
+        gap:20px;
+        color: #000 !important;
+        height: 200px !important;
+        .btn {
+            background-color: #B1E6E4;
+            padding: 5px 20px ;
+            color: #005F5D;
+            
+        }
+    }
+}

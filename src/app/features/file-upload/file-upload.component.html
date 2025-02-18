@@ -1,0 +1,45 @@
+<div class="upload-container">
+    <p class="upload-title text-primary text-xl my-2">Upload thông tin xử lý tra soát</p>
+    <div class="flex ">
+        <div class="flex-1   ">
+            <!-- Drag & Drop Area -->
+     <ngx-file-drop 
+     (onFileDrop)="onFilesDropped($event)"
+     [dropZoneLabel]="'Kéo thả file vào đây'"
+     class="dropzone">
+     
+     <ng-template ngx-file-drop-content-tmp >
+       <!-- <img src="assets/upload-icon.png" alt="Upload Icon" class="upload-icon" /> -->
+       <p>Kéo thả file vào đây</p>
+       <p>hoặc</p>
+       <label class="btn">
+         Chọn file
+         <input type="file" (change)="onFileSelected($event)" hidden />
+       </label>
+     </ng-template>
+     
+          </ngx-file-drop>
+     </div>
+     <div class="filename flex-1">
+        <div class="my-3">
+            <tui-icon
+    icon="@tui.download"
+    class="text-secondary text-sm mr-1"
+/>
+            <a href="#" class="text-secondary ">Tải file mẫu</a>
+        </div>
+        <label tuiLabel >
+            Tên File
+            <tui-textfield  class="w-1/2">
+                <input   
+                    tuiTextfield
+                     readonly
+                     value={{fileName}}
+                />
+            </tui-textfield>
+            <p *ngIf="invalidFile" class="text-red-500">File không hợp lệ</p>
+        </label>
+        <button class="btn px-3 py-1 bg-primary-10 text-secondary  rounded-lg mt-3 ">Xử lý tra soát theo file</button>
+     </div>
+    </div>
+  </div>

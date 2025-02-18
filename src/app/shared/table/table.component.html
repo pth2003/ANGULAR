@@ -19,6 +19,7 @@
   >
   </ag-grid-angular>
   <app-pagination
+    *ngIf="showPagination"
     (pageSizeChange)="updatePageSize($event)"
     [gridApi]="gridApi"
   ></app-pagination>

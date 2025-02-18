@@ -15,7 +15,7 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, TuiIcon, TuiAvatar, SidebarComponent],
+  imports: [CommonModule, TuiIcon, TuiAvatar],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

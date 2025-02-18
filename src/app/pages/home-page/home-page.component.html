@@ -4,14 +4,15 @@
     <app-header (toggleSidebar)="toggleSidebar()"></app-header>
     <div class="flex relative">
       <!-- Sidebar ở bên trái -->
-      <app-sidebar [open]="sidebarOpen()"></app-sidebar>
+      <app-sidebar [open]="sidebarOpen()" ></app-sidebar>
 
       <!-- Tableview -->
       <div
         [class.ml-[350px]]="sidebarOpen()"
         class=" duration-300 flex-1"
       >
-        <app-tableview></app-tableview>
+        <router-outlet></router-outlet>
+        <!-- <app-tableview></app-tableview> -->
       </div>
     </div>
   </div>

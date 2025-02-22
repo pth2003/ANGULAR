@@ -1,0 +1,38 @@
+<div class="custom-input-container">
+    <label tuiLabel>{{ label }}</label>
+    <ng-container [ngSwitch]="type">
+      <!-- Input text -->
+      <tui-textfield *ngSwitchCase="'text'" tuiTextfieldSize="s">
+        <input tuiTextfield [placeholder]="placeholder" [disabled]="disable" [value]="value" (input)="onInput($event)" />
+      </tui-textfield>
+
+        <!-- Input date -->
+        <tui-input-date  tuiTextfieldSize="s" [tuiTextfieldLabelOutside]="true" *ngSwitchCase="'date'" [(ngModel)]="dateValue" (ngModelChange)="onInput($event)"  >
+            {{placeholder}}
+        </tui-input-date>
+      
+
+      <!-- Select dropdown -->
+      <tui-select   
+      tuiTextfieldSize="s"
+      
+      [tuiTextfieldLabelOutside]="true"
+      
+      *ngSwitchCase="'select'" [(ngModel)]="value">
+              
+            <ng-template tuiDataList>
+                <tui-data-list >
+                    <button
+                    *ngFor="let item of options" 
+            tuiOption
+            type="button"
+            [value]="item.value"
+        >
+            {{ item.label }}
+        </button>
+    </tui-data-list>
+</ng-template>
+  </tui-select>
+    </ng-container>
+    
+  </div>

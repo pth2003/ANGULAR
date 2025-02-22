@@ -9,3 +9,16 @@ body {
   height: auto;
   margin: 0;
 }
+.btn {
+  color: #167775;
+  background-color: #B1E6E4 ;
+  padding: 5px 10px ;
+  font-weight: bold ;
+  border-radius: 5px ;
+}
+.btn-border {
+  border: 1px solid #167775;
+}
+.btn-outline {
+  background-color: unset;
+}

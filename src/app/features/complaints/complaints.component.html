@@ -1,0 +1,21 @@
+<div class=" p-8 " >
+    <div class="border-2 p-4 h-full " style="border-radius: 10px">
+      <header class="pb-4">
+        <h2 class="text-xl">Tra soát khiếu nại nhận từ chủ thẻ</h2>
+        <hr />
+      </header>
+      <app-search-form (exportExcelEvent)="exportExcel()"></app-search-form>
+
+      <app-table #tableComponent [columnDefs]="columnDefs" [rowData]="transactionsQuery.data()" ></app-table>
+      <div class="btn-group flex ">
+        <button class=" btn btn-border btn-outline">
+          Bình luận
+        </button>
+        <div class="group-control-btn flex gap-10 flex-1 justify-center">
+          <button class="btn">In PL trả lời tra soát</button>
+          <button class="btn">In PL xử lý kết thúc khiếu nại onus </button>
+          <button class="btn">In PL xử lý kết thúc khiếu nại offus</button>
+        </div>
+      </div> 
+  </div>
+  
